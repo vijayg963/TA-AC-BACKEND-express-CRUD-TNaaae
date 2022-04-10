@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="flex">
+      <a href="/" class="left"> Users </a>
+      <a href="/users/new" class="right">Add new User</a>
+    </div>
+    <h1>User List</h1>
+    <%= users %>
+    <div>
+      <%= users.forEach((user)=>{ %>
+      <h1><%= user.name %></h1>
+      <h2><%= user.email %></h2>
+      <h2><%= user.age %></h2>
+      <% }) %>
+    </div>
+    <a href="/users/<%= user.id%>">
+      <button>Edit</button>
+    </a>
+  </body>
+</html>
